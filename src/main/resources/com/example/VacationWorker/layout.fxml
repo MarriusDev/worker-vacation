@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.VacationWorker.Controller" style="-fx-background-color: #cfcfcf;">
+    <padding>
+        <Insets top="5.0"/>
+    </padding>
+
+    <HBox spacing="10.0" alignment="TOP_CENTER">
+        <Label text="Dovolená od:" style="-fx-font-size: 18px;"/>
+        <DatePicker fx:id="startDate" style="-fx-font-size: 15px;" maxWidth="150" editable="false"/>
+    </HBox>
+
+    <HBox spacing="10.0" alignment="TOP_CENTER">
+        <Label text="Dovolená do:" style="-fx-font-size:18"/>
+        <DatePicker fx:id="endDate" style="-fx-font-size: 15px;" maxWidth="150" editable="false"/>
+    </HBox>
+
+    <HBox spacing="10.0" alignment="TOP_CENTER">
+        <Label text="Aktuální zůstatek dovolené:" style="-fx-font-size: 18px;"/>
+        <TextField fx:id="balanceTF" style="-fx-font-size: 15px; -fx-alignment: center;" promptText="43.75" maxWidth="75"/>
+        <Label text="?" style="-fx-font-size: 18px; -fx-text-fill: #0078D4;">
+            <tooltip>
+                <Tooltip text="Případné desetinné místo odděl tečkou."/>
+            </tooltip>
+        </Label>
+    </HBox>
+
+    <Button fx:id="button" text="spočítat" style="-fx-font-size: 20px;"/>
+    <Label fx:id="labelBalance" style="-fx-font-size: 16px;"/>
+</VBox>
